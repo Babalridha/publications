@@ -1,0 +1,12 @@
+---
+import DefaultBookLayout from './book-variants/DefaultBookLayout.astro';
+
+interface Props {
+  book: any;
+  variant?: string;
+}
+
+const { book, variant = "default" } = Astro.props;
+---
+{variant === "default" && <DefaultBookLayout book={book} />}
+{/* Add future variants here, e.g., variant === "minimal" && <MinimalBookLayout book={book} /> */}

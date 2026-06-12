@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { Calendar, ArrowRight } from '@lucide/astro';
+import siteData from '../data/site-data.json';
+import patternImg from '../assets/images/pattern.png';
+
+const { newsItems } = siteData;
+---
+<Layout title="News & Events - Bab al-Ridha Publications">
+  <div class="bg-[#fcfbf7] min-h-screen pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader title="NEWS AND EVENTS" />
+
+      <div class="space-y-32">
+        {newsItems.map((item, idx) => (
+          <div class="group grid lg:grid-cols-2 gap-16 items-start">
+            <div class={`space-y-8 ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3 text-emerald-800">
+                  <Calendar class="w-4 h-4" />
+                  <span class="text-[10px] font-black uppercase tracking-[0.4em]">{item.date}</span>
+                </div>
+                <h2 class="text-4xl font-serif text-slate-900 group-hover:text-emerald-900 transition-colors duration-500 leading-tight">
+                  {item.title}
+                </h2>
+              </div>
+              
+              <div class="h-0.5 w-12 bg-emerald-800/30 group-hover:w-20 group-hover:bg-emerald-800 transition-all duration-500"></div>
+              
+              <div class="text-slate-600 leading-loose font-light text-lg whitespace-pre-line">
+                {item.content}
+              </div>
+              
+              <div class="pt-6">
+                <button class="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-emerald-900 border-b-2 border-emerald-900/10 pb-2 hover:border-emerald-900 transition-all group/btn cursor-pointer">
+                  WATCH LIVE ON YOUTUBE <ArrowRight class="w-3.5 h-3.5 group-hover/btn:translate-x-2 transition-transform" />
+                </button>
+              </div>
+            </div>
+
+            <div class={`relative ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div class="absolute -inset-4 bg-emerald-900/5 blur-3xl rounded-full opacity-40 group-hover:opacity-100 transition-opacity"></div>
+              <div class="relative aspect-video bg-black rounded-sm overflow-hidden shadow-2xl border border-white/10 ring-1 ring-slate-200">
+                 <iframe 
+                  class="w-full h-full"
+                  src={item.videoUrl}
+                  title={item.title}
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Decorative footer element for news */}
+    <div 
+      class="w-full h-64 mt-32 opacity-[0.03] pointer-events-none" 
+      style={{ backgroundImage: `url(${patternImg.src})`, backgroundSize: '300px' }}
+    ></div>
+  </div>
+</Layout>

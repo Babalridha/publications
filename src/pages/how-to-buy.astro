@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { ShoppingBag, Globe, MapPin, Package } from '@lucide/astro';
+import patternImg from '../assets/images/pattern.png';
+
+const mainMethods = [
+  {
+    icon: ShoppingBag,
+    title: "Amazon",
+    description: "You can buy our books from Amazon by just searching the name of the book on the Amazon website. If you want Amazon page links for a specific book then please visit the book page.",
+    cta: "BUY FROM AMAZON"
+  },
+  {
+    icon: MapPin,
+    title: "Buy in Qum",
+    description: "If you are in Qum, we have a very special discount for you for your personal copy. Get in touch with us on our contact number +98 930 053 2014 or visit the Institute to procure your copy.",
+    cta: "CONTACT US"
+  },
+  {
+    icon: Globe,
+    title: "Resellers",
+    description: "If you own a Islamic bookshop or an online bookstore and would like to sell our books, please do not hesitate to get in touch with us.",
+    cta: "CONTACT US"
+  },
+  {
+    icon: Package,
+    title: "Bulk orders",
+    description: "If you are interested in ordering copies of our books in bulk (12 or more), then we can provide you the books at special discount in the Holy city of Qum or we can also ship them directly to your location.",
+    cta: "CONTACT US"
+  }
+];
+
+const representatives = [
+  { location: "Arusha, Tanzania", name: "Kumail Rahim", contact: "+ 255 782 007 170" },
+  { location: "Nairobi, Kenya", name: "Jabir Karmali", contact: "+ 254 745 960393" },
+  { location: "Dar us Salaam, TZ", name: "Muntazir Remtula", contact: "+ 255 686 811 446" },
+  { location: "Dar us Salaam, TZ", name: "Shakir Moledina", contact: "+ 255 692 065 673" },
+  { location: "UK", name: "Hujjat Bookshop", contact: "hujjatbookshop.co.uk", link: "https://hujjatbookshop.co.uk" },
+  { location: "Australia & NZ", name: "Shia Books Australia", contact: "shiabooks.com.au", link: "https://shiabooks.com.au" },
+  { location: "Canada", name: "Muhammad", contact: "+ 1 (647) 576 2134" },
+  { location: "Canada", name: "Mikdad Khimji", contact: "+ 1 (647) 880 2532" }
+];
+---
+<Layout title="How to Buy - Bab al-Ridha Publications">
+  <div class="bg-[#fcfbf7] min-h-screen pt-32 pb-24 uppercase">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader title="hOW TO BUY" subtitle="methods of buying" />
+      
+      {/* Main Methods Grid */}
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+        {mainMethods.map((method) => {
+          const IconComponent = method.icon;
+          return (
+            <div class="bg-white p-10 rounded-sm shadow-sm border border-slate-100 flex flex-col h-full group">
+              <div class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-800 mb-8 group-hover:bg-emerald-900 group-hover:text-white transition-all duration-500">
+                <IconComponent class="w-8 h-8" />
+              </div>
+              <h3 class="text-xl font-serif font-bold text-slate-900 mb-4">{method.title}</h3>
+              <p class="text-[10px] text-slate-500 leading-relaxed mb-8 font-black tracking-wider flex-grow normal-case">{method.description}</p>
+              <button class="text-[10px] font-black tracking-[0.2em] text-emerald-800 border-b border-emerald-800/20 pb-2 hover:text-emerald-950 hover:border-emerald-950 transition-all uppercase text-left w-fit cursor-pointer">
+                {method.cta}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Local Representatives Section */}
+      <div class="mb-24 relative p-12 lg:p-20 bg-emerald-950 text-white rounded-sm overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: `url(${patternImg.src})`, backgroundSize: '300px' }}></div>
+        <div class="relative z-10">
+          <div class="text-center mb-16 space-y-4">
+            <p class="text-emerald-400 font-black tracking-[0.4em] uppercase text-[10px]">local Representative</p>
+            <h2 class="text-4xl md:text-5xl font-serif">find your LOCAL REPRESENTATIVE</h2>
+            <p class="text-emerald-100/70 max-w-2xl mx-auto font-light leading-relaxed normal-case">
+              Currently we have representatives for the following locations: East Africa, Canada, United Kingdom and Australia & NZ.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {representatives.map((rep) => (
+              <div class="bg-white/5 backdrop-blur-sm p-6 border border-white/10 rounded-sm hover:bg-white/10 transition-all">
+                <span class="block text-[9px] font-black text-emerald-400 uppercase tracking-widest mb-1">{rep.location}</span>
+                <p class="text-lg font-serif font-bold mb-2 normal-case">{rep.name}</p>
+                {rep.link ? (
+                  <a href={rep.link} target="_blank" rel="noopener noreferrer" class="text-[10px] text-emerald-200 hover:underline tracking-widest lowercase">{rep.contact}</a>
+                ) : (
+                  <span class="text-[10px] text-emerald-100/80 tracking-widest">{rep.contact}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Get in Touch Section */}
+      <div class="max-w-4xl mx-auto bg-white p-12 md:p-16 border border-slate-100 shadow-xl rounded-sm">
+        <div class="grid md:grid-cols-3 gap-12 items-start">
+          <div class="md:col-span-1 space-y-4">
+            <h2 class="text-3xl font-serif text-slate-900 leading-tight">get in touch with us</h2>
+            <div class="h-1 w-12 bg-emerald-800"></div>
+            <p class="text-[10px] text-slate-400 font-black uppercase tracking-widest leading-loose normal-case">
+              Get in touch with us by dropping us a message on WhatsApp +98 930 053 2014 or email us at publications@babalridha.com
+            </p>
+          </div>
+          <div class="md:col-span-2">
+            <h3 class="text-[10px] font-black text-emerald-900 mb-6 uppercase tracking-[0.3em]">We would be more than happy to assist you if:</h3>
+            <ul class="space-y-6">
+              {[
+                "You are from a region where we do not have a representative and you want to buy the book",
+                "You want to buy the book but you were not able to get in touch with your local representative or buy online",
+                "You would like to place bulk orders for your Islamic centre or become a reseller",
+                "You have spotted some mistakes in our books and you would like to inform us",
+                "You have any other suggestions or you would like to volunteer to help us out"
+              ].map((item) => (
+                <li class="flex gap-4 items-start text-xs text-slate-600 font-light leading-relaxed normal-case">
+                  <div class="w-1.5 h-1.5 rounded-full bg-emerald-800 mt-2 shrink-0"></div>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

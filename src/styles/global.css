@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fcfbf7;
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: var(--font-serif);
+}
+
+.islamic-pattern {
+  background-image: url('https://publications.babalridha.com/wp-content/uploads/2023/03/5540822-3.png');
+  background-repeat: repeat;
+}

@@ -1,0 +1,260 @@
+---
+import { ChevronDown, Menu, X, ShoppingCart, Book } from '@lucide/astro';
+import { Image } from 'astro:assets';
+import logoImg from '../assets/images/logo.png';
+
+interface Props {
+  isHome?: boolean;
+}
+
+const { isHome = false } = Astro.props;
+---
+<nav 
+  id="navbar"
+  data-ishome={isHome ? "true" : "false"}
+  class={`fixed top-0 left-0 right-0 transition-all duration-500 ease-in-out z-[100] ${
+    isHome ? 'bg-transparent py-8 nav-unscrolled nav-is-home' : 'bg-white py-4 shadow-sm nav-unscrolled'
+  }`}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3">
+        <Image 
+          id="nav-logo"
+          src={logoImg} 
+          alt="Bab al-Ridha Logo" 
+          class="transition-all duration-500 transform h-14 scale-100 w-auto" 
+        />
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center">
+        <!-- Spirituality Dropdown -->
+        <div class="group relative">
+          <a 
+            href="#" 
+            class="nav-link flex items-center gap-1 px-4 py-2 text-[10px] font-black transition-all uppercase tracking-[0.2em]"
+          >
+            Spirituality
+            <ChevronDown class="w-3 h-3 opacity-40 group-hover:rotate-180 transition-transform" />
+          </a>
+          <div class="absolute left-0 top-full hidden group-hover:block w-72 bg-white shadow-2xl border border-slate-100 p-2 z-[110] rounded-b-lg animate-in fade-in slide-in-from-top-2 duration-300">
+            <div class="space-y-1">
+              <a href="/book/a-treatise-on-servitude" class="flex items-center gap-3 hover:bg-emerald-50 p-3 rounded transition-colors group/sub">
+                <Book class="w-4 h-4 text-emerald-800" />
+                <span class="text-[10px] font-bold text-slate-900 uppercase tracking-widest">A Treatise on Servitude</span>
+              </a>
+              <a href="/book/dawn-of-love" class="flex items-center gap-3 hover:bg-emerald-50 p-3 rounded transition-colors group/sub">
+                <Book class="w-4 h-4 text-emerald-800" />
+                <span class="text-[10px] font-bold text-slate-900 uppercase tracking-widest">Dawn of Love</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Historical Fiction Dropdown -->
+        <div class="group relative">
+          <a 
+            href="#" 
+            class="nav-link flex items-center gap-1 px-4 py-2 text-[10px] font-black transition-all uppercase tracking-[0.2em]"
+          >
+            Historical Fiction
+            <ChevronDown class="w-3 h-3 opacity-40 group-hover:rotate-180 transition-transform" />
+          </a>
+          <div class="absolute left-0 top-full hidden group-hover:block w-72 bg-white shadow-2xl border border-slate-100 p-2 z-[110] rounded-b-lg animate-in fade-in slide-in-from-top-2 duration-300">
+            <div class="space-y-1">
+              <a href="/book/riverside-to-the-ocean" class="flex items-center gap-3 hover:bg-emerald-50 p-3 rounded transition-colors group/sub">
+                <Book class="w-4 h-4 text-emerald-800" />
+                <span class="text-[10px] font-bold text-slate-900 uppercase tracking-widest">Riverside to Ocean</span>
+              </a>
+              <a href="/book/spears-of-deceit" class="flex items-center gap-3 hover:bg-emerald-50 p-3 rounded transition-colors group/sub">
+                <Book class="w-4 h-4 text-emerald-800" />
+                <span class="text-[10px] font-bold text-slate-900 uppercase tracking-widest">Spears of Deceit</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News & Events -->
+        <div class="group relative">
+          <a 
+            href="/news" 
+            class="nav-link flex items-center gap-1 px-4 py-2 text-[10px] font-black transition-all uppercase tracking-[0.2em]"
+          >
+            News & Events
+          </a>
+        </div>
+
+        <!-- Buy Button -->
+        <a 
+          href="/how-to-buy" 
+          class="nav-buy-btn ml-6 px-6 py-2.5 rounded-sm text-[10px] font-black transition-all shadow-md flex items-center gap-2 tracking-[0.2em]"
+        >
+          <ShoppingCart class="w-3 h-3" />
+          HOW TO BUY
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button 
+        class="mobile-menu-open lg:hidden p-2 transition-colors mobile-toggle-btn cursor-pointer"
+      >
+        <Menu class="w-7 h-7" />
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay Container -->
+<div 
+  id="mobile-menu"
+  class="mobile-menu-container fixed inset-0 z-[99999] lg:hidden opacity-0 pointer-events-none transition-opacity duration-300"
+>
+  <!-- Backdrop -->
+  <div class="mobile-menu-backdrop absolute inset-0 bg-slate-950/80 backdrop-blur-md"></div>
+  
+  <!-- Slide-out Panel -->
+  <div class="mobile-menu-panel absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl flex flex-col p-8 space-y-8 transform translate-x-full transition-transform duration-500 ease-out">
+    <div class="flex justify-between items-center mb-4">
+      <Image src={logoImg} alt="Logo" class="h-10 w-auto" />
+      <button class="mobile-menu-close text-slate-900 p-2 cursor-pointer"><X class="w-8 h-8" /></button>
+    </div>
+    
+    <div class="space-y-6 overflow-y-auto pr-2">
+      <div class="space-y-3">
+        <p class="text-[10px] font-black tracking-[0.4em] text-emerald-800 uppercase">Spirituality</p>
+        <a href="/book/a-treatise-on-servitude" class="block text-xl font-serif text-slate-900">A Treatise on Servitude</a>
+        <a href="/book/dawn-of-love" class="block text-xl font-serif text-slate-900">Dawn of Love</a>
+      </div>
+      
+      <div class="space-y-3 pt-6 border-t border-slate-100">
+        <p class="text-[10px] font-black tracking-[0.4em] text-emerald-800 uppercase">Historical Fiction</p>
+        <a href="/book/riverside-to-the-ocean" class="block text-xl font-serif text-slate-900">Riverside to Ocean</a>
+        <a href="/book/spears-of-deceit" class="block text-xl font-serif text-slate-900">Spears of Deceit</a>
+      </div>
+      
+      <a href="/news" class="block py-4 font-bold text-slate-900 border-t border-slate-100 tracking-[0.2em] text-[10px] uppercase">NEWS & EVENTS</a>
+      
+      <a 
+        href="/how-to-buy" 
+        class="mt-6 block py-5 px-6 bg-emerald-900 text-white rounded-sm font-black text-center tracking-[0.3em] text-[10px] uppercase shadow-xl"
+      >
+        HOW TO BUY
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Unscrolled & Home page layout styling overrides */
+  nav.nav-is-home.nav-unscrolled .nav-link {
+    color: #ffffff;
+  }
+  nav.nav-is-home.nav-unscrolled .nav-link:hover {
+    color: #a7f3d0; /* emerald-200 */
+  }
+  nav.nav-is-home.nav-unscrolled .mobile-toggle-btn {
+    color: #ffffff;
+  }
+  nav.nav-is-home.nav-unscrolled .nav-buy-btn {
+    background-color: #ffffff;
+    color: #064e3b; /* emerald-900 */
+  }
+  nav.nav-is-home.nav-unscrolled .nav-buy-btn:hover {
+    background-color: #f0fdf4; /* emerald-50 */
+  }
+
+  /* Default and Scrolled styling overrides */
+  nav .nav-link {
+    color: #1e293b; /* slate-800 */
+  }
+  nav .nav-link:hover {
+    color: #064e3b; /* emerald-900 */
+  }
+  nav .mobile-toggle-btn {
+    color: #0f172a; /* slate-900 */
+  }
+  nav .nav-buy-btn {
+    background-color: #064e3b; /* emerald-900 */
+    color: #ffffff;
+  }
+  nav .nav-buy-btn:hover {
+    background-color: #065f46; /* emerald-800 */
+  }
+</style>
+
+<script>
+  function setupNavbar() {
+    const nav = document.getElementById('navbar');
+    const logo = document.getElementById('nav-logo');
+    if (!nav) return;
+    const isHome = nav.dataset.ishome === 'true';
+
+    function handleScroll() {
+      if (!nav || !logo) return;
+      const scrolled = window.scrollY > 50;
+      
+      if (scrolled) {
+        nav.classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-md', 'py-2', 'nav-scrolled');
+        nav.classList.remove('bg-transparent', 'py-8', 'shadow-sm', 'nav-unscrolled');
+        if (isHome) {
+          nav.classList.remove('bg-white');
+        } else {
+          nav.classList.remove('bg-white', 'py-4');
+        }
+        logo.classList.add('h-8', 'scale-90');
+        logo.classList.remove('h-14', 'scale-100');
+      } else {
+        nav.classList.add('nav-unscrolled');
+        nav.classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-md', 'py-2', 'nav-scrolled');
+        if (isHome) {
+          nav.classList.add('bg-transparent', 'py-8');
+          nav.classList.remove('bg-white', 'py-4', 'shadow-sm');
+        } else {
+          nav.classList.add('bg-white', 'py-4', 'shadow-sm');
+          nav.classList.remove('bg-transparent', 'py-8');
+        }
+        logo.classList.add('h-14', 'scale-100');
+        logo.classList.remove('h-8', 'scale-90');
+      }
+    }
+
+    // Toggle menu handlers
+    const openBtn = document.querySelector('.mobile-menu-open');
+    const closeBtn = document.querySelector('.mobile-menu-close');
+    const backdrop = document.querySelector('.mobile-menu-backdrop');
+    const menuContainer = document.getElementById('mobile-menu');
+    const menuPanel = document.querySelector('.mobile-menu-panel');
+
+    function openMenu() {
+      if (!menuContainer || !menuPanel) return;
+      menuContainer.classList.remove('opacity-0', 'pointer-events-none');
+      menuContainer.classList.add('opacity-100');
+      menuPanel.classList.remove('translate-x-full');
+      menuPanel.classList.add('translate-x-0');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      if (!menuContainer || !menuPanel) return;
+      menuContainer.classList.remove('opacity-100');
+      menuContainer.classList.add('opacity-0', 'pointer-events-none');
+      menuPanel.classList.remove('translate-x-0');
+      menuPanel.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+    }
+
+    openBtn?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+    backdrop?.addEventListener('click', closeMenu);
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+  }
+
+  // Run on initial load
+  setupNavbar();
+
+  // Run on Astro page navigation if using view transitions
+  document.addEventListener('astro:after-swap', setupNavbar);
+</script>

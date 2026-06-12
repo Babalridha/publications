@@ -1,0 +1,103 @@
+[
+  {
+    "id": "a-treatise-on-servitude",
+    "title": "A Treatise on Servitude",
+    "subtitle": "A Commentary on Imam Sajjad's (a) Risalat al-Huquq",
+    "author": "Ayatullah Muhammad Baqir Tahriri",
+    "translator": "Salman Bhojani",
+    "editor": "Muhammad Mahdi Kassamali",
+    "category": "Spirituality",
+    "coverImage": "/src/assets/images/book-treatise.png",
+    "rating": 5,
+    "prices": {
+      "hardcover": 34.99,
+      "paperback": 24.99,
+      "ebook": 9.99
+    },
+    "specs": {
+      "isbn": "978-1-915784-01-8",
+      "pageCount": 560,
+      "weight": "810 grams",
+      "dimensions": "6 x 9 inches"
+    },
+    "blurb": "In essence, the Risalat al-Huquq is an expounding of three rights. The first is the responsibilities and existential relationship that the human has with respect to Allah (absolute submission). The second deals with the human with respect to himself, and the third consists of the laws governing relationships with one another.",
+    "authorBio": "Ayatullah Muhammad Baqir Tahriri is a senior scholar of ethics and Islamic spirituality in the Hawza of Qum. He is the current head of the Marvi Seminary in Tehran. He has spent decades teaching and mentoring students in the deep intricacies of self-purification and gnosticism.",
+    "authorImage": "/src/assets/images/author-tahriri.png",
+    "variant": "default"
+  },
+  {
+    "id": "dawn-of-love",
+    "title": "Dawn of Love",
+    "subtitle": "The Marriage of Imam Ali (a) and Lady Fatima (s)",
+    "author": "Ayatullah Khamenei",
+    "category": "Spirituality",
+    "coverImage": "/src/assets/images/book-dawn.png",
+    "rating": 5,
+    "prices": {
+      "hardcover": 29.99,
+      "paperback": 19.99,
+      "ebook": 7.99
+    },
+    "specs": {
+      "isbn": "978-1-915784-05-6",
+      "pageCount": 220,
+      "weight": "450 grams",
+      "dimensions": "5.5 x 8.5 inches"
+    },
+    "blurb": "Dawn of Love explores the mystical and spiritual dimensions of the most blessed union in Islamic history. It provides practical lessons for modern couples while delving deep into the esoteric significance of the marriage between the Commander of the Faithful and the Leader of the Women of Paradise.",
+    "authorBio": "Ayatullah Sayyid Ali Khamenei is a profound scholar and jurist. His insights into Islamic history and family values are highly regarded for their practical and spiritual depth.",
+    "authorImage": "/src/assets/images/author-khamenei.jpg",
+    "variant": "default"
+  },
+  {
+    "id": "riverside-to-the-ocean",
+    "title": "Riverside to the Ocean",
+    "subtitle": "The Life of Sheikh Morteza Ansari",
+    "author": "Vahid Yaminpour",
+    "translator": "Seyyid Ali Irtiza",
+    "category": "Historical Fiction",
+    "coverImage": "/src/assets/images/book-riverside.png",
+    "rating": 5,
+    "prices": {
+      "hardcover": 32.99,
+      "paperback": 21.99,
+      "ebook": 8.99
+    },
+    "specs": {
+      "isbn": "978-1-915784-02-5",
+      "pageCount": 380,
+      "weight": "620 grams",
+      "dimensions": "6 x 9 inches"
+    },
+    "blurb": "A captivating historical novel following the extraordinary journey of Sheikh Morteza Ansari. From humble beginnings to becoming the peak of Islamic jurisprudence, this story chronicles a seeker's relentless pursuit of truth.",
+    "authorBio": "Vahid Yaminpour is an author specializing in Islamic historical fiction and biography, dedicated to bringing the lives of the great scholars to life through evocative storytelling.",
+    "authorImage": "/src/assets/images/author-yaminpour.jpg",
+    "variant": "default"
+  },
+  {
+    "id": "spears-of-deceit",
+    "title": "SPEARS OF DECEIT",
+    "subtitle": "The Story of battle of Siffin",
+    "author": "Ghulamreza Aabruye",
+    "translator": "Sabira Rajabali",
+    "editor": "Binte Ali",
+    "category": "Historical Fiction",
+    "coverImage": "/src/assets/images/book-spears.jpg",
+    "rating": 5,
+    "prices": {
+      "hardcover": 31.99,
+      "paperback": 20.99,
+      "ebook": 8.99
+    },
+    "specs": {
+      "isbn": "978-1-915784-03-2",
+      "pageCount": 410,
+      "weight": "650 grams",
+      "dimensions": "6 x 9 inches"
+    },
+    "blurb": "Spears of Deceit takes readers into the heart of Kufa and Damascus during the turbulent events leading to the battle of Siffin. Through the eyes of diverse characters, it explores political intrigue and betrayal.",
+    "authorBio": "Ghulamreza Aabruye is a writer and researcher focused on the socio-political history of the early Islamic period.",
+    "authorImage": "/src/assets/images/author-aabruye.jpg",
+    "variant": "default"
+  }
+]

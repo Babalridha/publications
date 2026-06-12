@@ -1,0 +1,82 @@
+---
+import { Mail, MapPin, Phone } from '@lucide/astro';
+import { Image } from 'astro:assets';
+import logoImg from '../assets/images/logo.png';
+import patternImg from '../assets/images/pattern.png';
+
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-white border-t border-slate-100 relative overflow-hidden">
+  {/* Subtle Pattern for the whole background */}
+  <div 
+    class="absolute inset-0 opacity-[0.7] pointer-events-none" 
+    style={{ backgroundImage: `url(${patternImg.src})`, backgroundSize: '300px' }}
+  ></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-20">
+      
+      <div class="lg:col-span-4 space-y-8">
+        <a href="/" class="inline-block">
+          <Image src={logoImg} alt="Bab al-Ridha Logo" class="h-16 w-auto" />
+        </a>
+        <p class="text-sm leading-relaxed text-slate-500 max-w-xs font-light">
+          Producing high-quality academic and spiritual publications 
+          rooted in the profound traditions of the Ahlulbayt (a) for the global community.
+        </p>
+        <div class="flex gap-5 text-slate-400">
+          <a href="#" class="hover:text-emerald-800 transition-colors" aria-label="Youtube">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"/>
+              <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+            </svg>
+          </a>
+          <a href="#" class="hover:text-emerald-800 transition-colors" aria-label="Instagram">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" class="hover:text-emerald-800 transition-colors" aria-label="Facebook">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-4 space-y-6">
+        <h4 class="text-emerald-900 font-black tracking-widest uppercase text-[10px]">Library</h4>
+        <ul class="space-y-4 text-xs font-bold text-slate-600 uppercase tracking-widest">
+          <li><a href="/" class="hover:text-emerald-800 transition-colors">Spirituality</a></li>
+          <li><a href="/" class="hover:text-emerald-800 transition-colors">Historical Fiction</a></li>
+          <li><a href="/" class="hover:text-emerald-800 transition-colors">New Releases</a></li>
+          <li><a href="/how-to-buy" class="hover:text-emerald-800 transition-colors">How to Buy</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-4 space-y-8">
+        <h4 class="text-emerald-900 font-black tracking-widest uppercase text-[10px]">Get in Touch</h4>
+        <ul class="space-y-6 text-sm font-light text-slate-600">
+          <li class="flex items-start gap-4">
+            <MapPin class="w-5 h-5 text-emerald-700 shrink-0" />
+            <span>Qum, Islamic Republic of Iran</span>
+          </li>
+          <li class="flex items-center gap-4">
+            <Phone class="w-5 h-5 text-emerald-700 shrink-0" />
+            <span>+98 930 053 2014</span>
+          </li>
+          <li class="flex items-center gap-4">
+            <Mail class="w-5 h-5 text-emerald-700 shrink-0" />
+            <span class="font-medium text-emerald-900">info@babalridha.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-slate-400 font-black tracking-widest uppercase">
+      <p>© {currentYear} Bab al-Ridha Institute</p>
+    </div>
+  </div>
+</footer>

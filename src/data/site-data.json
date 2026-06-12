@@ -1,0 +1,24 @@
+{
+  "primaryBg": "#fcfbf7",
+  "patternUrl": "/src/assets/images/pattern.png",
+  "logoUrl": "/src/assets/images/logo.png",
+  "sliderImages": [
+    "/src/assets/images/slider-1.webp",
+    "/src/assets/images/slider-2.png",
+    "/src/assets/images/slider-3.png"
+  ],
+  "newsItems": [
+    {
+      "date": "December 28, 2024",
+      "title": "Bab al-Ridha launches 4 books",
+      "content": "Join us on 5th January 2024, in the Holy city of Qum or live on YouTube, alongside the closing ceremony of BRisc 12 for an exciting book launch event for 4 books:\n\n• The Lofty Stations\n• Dawn of Love\n• From the Riverside to the Ocean\n• Spears of Deceit\n\nThe event will be held at Yawaran-e-Mahdi institute near Jamkaran. It will be part of the annual BRisc Closing Ceremony. The event is open for both brothers and sisters to attend and you can also buy your copy at a special discounted price!",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "date": "March 28, 2023",
+      "title": "Bab al-Ridha Institute announces its first publication",
+      "content": "Join us on 5th April 2023 at 8 PM, in the Holy city of Qum or live on YouTube, on the night of Milad of Imam Hasan (a) for an exciting book launch event for the book 'A Treatise on Servitude: A Commentary on Imam Sajjad’s Risalat al-Huquq'.\n\nThe event will be held at Bab al-Ridha Institute, starting with salat in jama’ah, followed by iftar at 7 PM. Program will contain a short interview with the editor of the book, Shaykh Muhammad Mahdi Kassamali, followed by a special video message from the revered author Ayatullah Muhammad Baqir Tahriri. Finally, we will have our distinguished guest Shaykh Muhammad Khalfan as our keynote speaker for the event.",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    }
+  ]
+}

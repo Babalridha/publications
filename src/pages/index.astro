@@ -1,17 +1,171 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import teamData from '../data/team.json';
+import { PencilLine, BookOpen, GraduationCap, Users } from '@lucide/astro';
+import { Image } from 'astro:assets';
+import patternImg from '../assets/images/pattern.png';
+import intro1Img from '../assets/images/intro-1.jpg';
+import intro2Img from '../assets/images/intro-2.jpg';
 
+// Dynamically resolve local team images
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{webp,png,jpg,jpeg}');
 ---
+<Layout title="Bab al-Ridha Publications - Home" isHome={true}>
+  <Hero />
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  {/* Introduction Section */}
+  <section class="py-24 bg-[#fcfbf7] relative overflow-hidden">
+    {/* Subtle Background Pattern */}
+    <div 
+      class="absolute right-0 top-0 w-full h-full opacity-[0.03] pointer-events-none" 
+      style={{ backgroundImage: `url(${patternImg.src})`, backgroundSize: '600px', backgroundPosition: 'center' }}
+    ></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center mb-16 space-y-4">
+        <h2 class="text-4xl md:text-5xl font-serif text-slate-900">Introduction</h2>
+        <div class="h-0.5 w-16 bg-emerald-800 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        {/* Left side: narrative text */}
+        <div class="lg:col-span-7 space-y-6 text-slate-700 font-light leading-relaxed text-base md:text-lg">
+          <p>
+            The importance and need of research in different Islamic subjects to present the correct and precise view of Islam, and to defend Islam from various doubts that are raised, especially from Western academic circles, is undeniable. Therefore, one of the important duties and skills that is necessary for students of Hawza is the duty of doing research in different Islamic subjects and producing novel research that will be of benefit to the progress of Islam.
+          </p>
+          <p>
+            In addition, any successful academic activity requires strong planning and curriculum to make it successful and effective. Therefore, given the fact that Intensive Short Course (BRISC) and Online Learning Platform (OLP) focus on providing academic activities and services, they require well-researched and accurate course titles, course materials, authentic books, etc. to ensure the quality and accuracy of the content being offered.
+          </p>
+          <p>
+            Although a good number of Islamic books have been translated into English, mainly from Persian and Arabic. However, the Islamic resources available in English face these shortcomings and challenges: many books are translated without keeping in mind the needs and requirements of English-speaking readers, the quality of translation is not up to the mark, the books are printed in a non-standard formatting, many of the good books are not easily available and accessible owing to a poor marketing system.
+          </p>
+          <p>
+            In addition to this, little attention is paid to authoring Islamic books with strong and authentic content based on the different needs of English-speaking readers and publishing them in attractive formats, and marketing them so that they are easily accessible. As a result, despite people’s interest in Islam and the Islamic way of life, a sufficient number of solid books are not available in many areas and subjects.
+          </p>
+        </div>
+
+        {/* Right side: beautifully crafted scholarly visual placeholders */}
+        <div class="lg:col-span-5 relative py-12 flex justify-center">
+          <div class="absolute -inset-4 bg-emerald-950/5 blur-[120px] rounded-full pointer-events-none"></div>
+          
+          <div class="relative w-full max-w-sm">
+            {/* Secondary bottom overlapping image */}
+            <div class="absolute -left-8 -bottom-4 w-[65%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform -rotate-3 hover:rotate-0 transition-transform duration-500 z-10">
+              <Image 
+                src={intro1Img} 
+                alt="Classical Islamic Manuscripts and Books" 
+                class="w-full h-44 object-cover"
+              />
+            </div>
+
+            {/* Primary upper image */}
+            <div class="relative w-[85%] ml-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform hover:scale-[1.03] transition-transform duration-500 z-20">
+              <Image 
+                src={intro2Img} 
+                alt="Scholarly Academic Library" 
+                class="w-full h-72 object-cover"
+              />
+              {/* Subtle caption overlay */}
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 to-transparent p-4 text-white">
+                <p class="text-xs font-serif italic text-emerald-100">Preserving sacred academic traditions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Aims & Objectives Section */}
+  <section class="py-32 relative bg-emerald-950 overflow-hidden">
+    {/* Full Section Pattern Overlay */}
+    <div 
+      class="absolute inset-0 opacity-[0.06] pointer-events-none mix-blend-overlay" 
+      style={{ backgroundImage: `url(${patternImg.src})`, backgroundSize: '250px' }}
+    ></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-24 space-y-6">
+        <p class="text-emerald-400 font-black tracking-[0.4em] uppercase text-[10px]">The Roadmap</p>
+        <h2 class="text-5xl md:text-6xl font-serif text-white">Aims &amp; Objectives</h2>
+        <div class="h-1 w-24 bg-emerald-500 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/[0.08] hover:border-emerald-500/30 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="text-emerald-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <PencilLine class="w-8 h-8 md:w-10 md:h-10" />
+            </div>
+            <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-4 tracking-wide">Original Research Support</h3>
+            <p class="text-emerald-100/80 font-light leading-relaxed text-sm md:text-base">To encourage and support original research work in English. To identify and collaborate with capable Hawza students for producing research work on selected topics.</p>
+          </div>
+        </div>
+
+        <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/[0.08] hover:border-emerald-500/30 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="text-emerald-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <BookOpen class="w-8 h-8 md:w-10 md:h-10" />
+            </div>
+            <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-4 tracking-wide">High-Quality Publishing</h3>
+            <p class="text-emerald-100/80 font-light leading-relaxed text-sm md:text-base">To author and publish high quality Islamic material on relevant and important topics in English in suitable formats.</p>
+          </div>
+        </div>
+
+        <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/[0.08] hover:border-emerald-500/30 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="text-emerald-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <GraduationCap class="w-8 h-8 md:w-10 md:h-10" />
+            </div>
+            <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-4 tracking-wide">Curriculum & Study Material</h3>
+            <p class="text-emerald-100/80 font-light leading-relaxed text-sm md:text-base">Author teaching manuals and other study material for courses conducted across other departments of the institute.</p>
+          </div>
+        </div>
+
+        <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/[0.08] hover:border-emerald-500/30 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="text-emerald-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Users class="w-8 h-8 md:w-10 md:h-10" />
+            </div>
+            <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-4 tracking-wide">Academic Training & Workshops</h3>
+            <p class="text-emerald-100/80 font-light leading-relaxed text-sm md:text-base">Conduct seminars, workshops, classes to train Hawza students in the skills of research, English writing and book authoring, translation, teaching; and other such research and publication related skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Team Section */}
+  <section class="py-32 bg-[#fcfbf7] relative">
+     <div 
+      class="absolute left-0 bottom-0 w-full h-64 opacity-[0.02] pointer-events-none" 
+      style={{ backgroundImage: `url(${patternImg.src})`, backgroundSize: '400px' }}
+    ></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <SectionHeader title="Leadership & Team" subtitle="Scholarly Oversight" />
+      <div class="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+        {teamData.map((member) => {
+          const memberImg = images[member.image];
+          if (!memberImg) {
+            throw new Error(`Team image not found for path: ${member.image}`);
+          }
+          return (
+            <div class="group bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 text-center space-y-6">
+              <div class="relative mx-auto w-56 h-56">
+                <div class="absolute inset-0 bg-emerald-900/5 rounded-full scale-110 group-hover:scale-125 transition-transform duration-700"></div>
+                <Image src={memberImg()} alt={member.name} class="relative w-full h-full object-cover rounded-full border-8 border-white shadow-xl" />
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-3xl font-serif font-bold text-slate-900">{member.name}</h3>
+                <p class="text-emerald-800 font-black tracking-[0.2em] uppercase text-[10px]">{member.role}</p>
+              </div>
+              <p class="text-slate-500 leading-relaxed font-light">{member.bio}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</Layout>

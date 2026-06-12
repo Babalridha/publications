@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BookTemplate from '../../components/BookTemplate.astro';
+import booksData from '../../data/books.json';
+
+export function getStaticPaths() {
+  return booksData.map((book) => ({
+    params: { id: book.id },
+    props: { book },
+  }));
+}
+
+const { book } = Astro.props;
+---
+<Layout title={`${book.title} - Bab al-Ridha Publications`} description={book.blurb}>
+  <BookTemplate book={book} variant={book.variant || "default"} />
+</Layout>

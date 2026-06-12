@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Shaykh Mustafa Mukhtar",
+    "role": "Director",
+    "image": "/src/assets/images/team-mukhtar.jpg",
+    "bio": "Oversees the strategic direction and academic rigor of all publications within the Institute."
+  },
+  {
+    "name": "Br. Muslim Bhojani",
+    "role": "Head of Operations",
+    "image": "/src/assets/images/team-bhojani.jpg",
+    "bio": "Coordinates project management and distribution logistics to ensure global reach of the Institute's works."
+  }
+]

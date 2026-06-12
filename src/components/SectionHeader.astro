@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  centered?: boolean;
+}
+
+const { title, subtitle, centered = true } = Astro.props;
+---
+<div class={`mb-16 ${centered ? 'text-center' : ''} space-y-4`}>
+  <h2 class="text-4xl md:text-5xl font-serif text-slate-900">{title}</h2>
+  {subtitle && (
+    <p class="text-lg text-slate-500 max-w-2xl mx-auto uppercase tracking-widest font-medium">
+      {subtitle}
+    </p>
+  )}
+  <div class={`h-1 w-20 bg-emerald-800 ${centered ? 'mx-auto' : ''} mt-4`}></div>
+</div>
