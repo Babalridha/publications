@@ -15,14 +15,19 @@
       "ebook": 9.99
     },
     "specs": {
-      "isbn": "978-1-915784-01-8",
+      "isbn": "9781915784018 (paperback), 9781915784025 (hardbound), 9781915784001 (ebook)",
       "pageCount": 560,
-      "weight": "810 grams",
+      "weight": "810 grams (paperback), 980 grams (hardcover)",
       "dimensions": "6 x 9 inches"
     },
-    "blurb": "In essence, the Risalat al-Huquq is an expounding of three rights. The first is the responsibilities and existential relationship that the human has with respect to Allah (absolute submission). The second deals with the human with respect to himself, and the third consists of the laws governing relationships with one another.",
-    "authorBio": "Ayatullah Muhammad Baqir Tahriri is a senior scholar of ethics and Islamic spirituality in the Hawza of Qum. He is the current head of the Marvi Seminary in Tehran. He has spent decades teaching and mentoring students in the deep intricacies of self-purification and gnosticism.",
-    "authorImage": "/src/assets/images/author-tahriri.png",
+    "blurb": "",
+    "description": [
+      "In essence, the Risālat al-huqūq is an expounding of three rights. The first is the responsibilities and existential relationship that the human has with respect to Allah (absolute submission).", 
+      "The second deals with the responsibilities and existential relationship of the human with respect to himself, including his body parts (the right of a human on himself). And the third consists of the responsibilities and laws governing the human’s relationship with one another (the rights of others). If we correctly understand the meaning of rights, then we will clearly recognize that to achieve complete success in fulfilling the rights of Allah, there is no other way except to humble oneself before Allah and seek His help.", 
+      "Even the prophets and awliyāʾ (close servants) of Allah, despite their abundant knowledge and spiritual stations, never neglected seeking help from Allah, not even for a moment! The Noble Prophet of Islam (peace and blessings be upon him and his family), whose blessed existence was an infinite ocean of knowledge, at every moment considered himself in need of Allah’s assistance."
+    ],
+    "authorBio": "Ayatullah Muhammad Baqir Tahriri is one of the most senior contemporary scholars of ethics, Islamic spirituality, and tafsir. He acquired his seminary studies under the most senior Shia scholars, such as Ayatullah Lankarani, Ayatullah Tabrizi, Ayatullah Misbah Yazdi and Ayatullah Jawadi Amoli, and at the same time, received spiritual guidance by his own father, Ayatullah Mahmood Tahriri. Ayatullah Mujtahidi, the giants Allamah Tabatabei and Ayatullah Bahjat, and spent years under the special guidance of Ayatullah Sa’adat Parwar. Currently, he resides in Tehran whilst frequenting the Holy city of Qum on the weekends, where students from all over Iran, as well as foreigners come to benefit from his ethical advices and spiritual instructions.",
+    "authorImage": "/src/assets/images/author-tahriri.jpg",
     "variant": "default"
   },
   {
@@ -31,7 +36,7 @@
     "subtitle": "The Marriage of Imam Ali (a) and Lady Fatima (s)",
     "author": "Ayatullah Khamenei",
     "category": "Spirituality",
-    "coverImage": "/src/assets/images/book-dawn.png",
+    "coverImage": "/src/assets/images/book-dawn.jpg",
     "rating": 5,
     "prices": {
       "hardcover": 29.99,
@@ -44,7 +49,11 @@
       "weight": "450 grams",
       "dimensions": "5.5 x 8.5 inches"
     },
-    "blurb": "Dawn of Love explores the mystical and spiritual dimensions of the most blessed union in Islamic history. It provides practical lessons for modern couples while delving deep into the esoteric significance of the marriage between the Commander of the Faithful and the Leader of the Women of Paradise.",
+    "blurb": "",
+    "description": [
+      "In this profound work, Ayatullah Sayyid Ali Khamenei offers an intimate and scholarly exploration of the marriage of Imam Ali (a) and Lady Fatima (s). Far from being a mere historical retelling, this book serves as a spiritual and practical guide for modern Muslim couples striving to establish a harmonious family life.",
+      "The author analyzes the simplicity, mutual respect, and spiritual depth of the household of the Ahlulbayt (a), showing how their marital journey provides eternal principles for resolving modern domestic challenges, nurturing children, and maintaining spiritual focus amidst worldly distractions."
+    ],
     "authorBio": "Ayatullah Sayyid Ali Khamenei is a profound scholar and jurist. His insights into Islamic history and family values are highly regarded for their practical and spiritual depth.",
     "authorImage": "/src/assets/images/author-khamenei.jpg",
     "variant": "default"
@@ -56,48 +65,54 @@
     "author": "Vahid Yaminpour",
     "translator": "Seyyid Ali Irtiza",
     "category": "Historical Fiction",
-    "coverImage": "/src/assets/images/book-riverside.png",
+    "coverImage": "/src/assets/images/book-riverside.jpg",
     "rating": 5,
     "prices": {
-      "hardcover": 32.99,
-      "paperback": 21.99,
-      "ebook": 8.99
+      "paperback": 15.00,
+      "ebook": 10.00
     },
     "specs": {
-      "isbn": "978-1-915784-02-5",
-      "pageCount": 380,
-      "weight": "620 grams",
-      "dimensions": "6 x 9 inches"
+      "isbn": "978-1-915784001",
+      "pageCount": 304,
+      "weight": "287 grams",
+      "dimensions": "5 x 8 inches"
     },
-    "blurb": "A captivating historical novel following the extraordinary journey of Sheikh Morteza Ansari. From humble beginnings to becoming the peak of Islamic jurisprudence, this story chronicles a seeker's relentless pursuit of truth.",
-    "authorBio": "Vahid Yaminpour is an author specializing in Islamic historical fiction and biography, dedicated to bringing the lives of the great scholars to life through evocative storytelling.",
+    "blurb": "",
+    "description": ["“I saw Imam Sadiq, peace be upon him, and he gave me a beautiful Quran. Its edges were decorated… it was just otherworldly.” “Muhammad, what does my dream mean?” “It is a glad tiding by Allah’s will. The Quran you received is the child you shall soon bear, Mullah Yaqoob’s Daughter!”", 
+    "Murtaza’s destiny seemed set in stone even before he was born. Yet, that he would have to earn every bit of it—and magnify it on a temporal canvas through nearly intolerable struggles—was beyond question.", 
+    "Born into the noble Ansari family of Dezful, he grew up learning much and fast. But the prancing River Dez and the bricked streets of Dezful could only entertain him for so long as a child. His restless soul and insatiable mind eventually led him to where all those thirsty must come, and where none leave unquenched.", 
+    "In the shadow of Amir al-Mu’mineen’s luminous Shrine, the unassuming Murtaza first became Shaykh, and then Khatam al-Fuqaha—the Seal of the Jurists! Yet, Murtaza remained unchanged—the humble boy from Dezful who carried his mother to the Shrine of his master on his ageing back each day, and who lived more austerely than even Catholic monks, even as millions around the world emulated him as a marja.", 
+    "It was in Najaf that Shaykh Murtaza Ansari’s long-awaited prayer was granted in the form of his friend, teacher, and mystical guide: Sayyid Ali Shushtari, the progenitor of the illustrious line of latter-day Shia mystics known as Maktab-e-Najaf.", 
+    "The otherworldly bond between the great marja and the great mystic endured until both found their eternal abode at the doorstep of their master’s Shrine—a place where a young Murtaza had once felt inexplicably at home, and where he had beseeched Amir al-Mu’mineen (as) to grant him his company and closeness."],
+    "authorBio": "Vahid Yaminpour (born December 24, 1980) is an Iranian university lecturer, writer, media activist, and presenter, who was appointed as the secretary of the Supreme Council of Youth on June 21, 2022, by a presidential decree, and was promoted to the Supreme Council of Adolescents and Youth, and was appointed as its secretary in February 2024. Yaminpour also served as the Deputy Minister of Youth Affairs at the Ministry of Sports and Youth from October 2021 to February 2024. He holds a master's degree in criminal law and criminology from Imam Sadegh University and a Ph.D. in the same field from the Islamic Azad University, Science and Research Branch, Tehran. Yaminpour has hosted political programs such as Yesterday, Today, Tomorrow, Jahanara, and Soraya on the Islamic Republic of Iran Television. In 2006, he was appointed secretary of the Socio-Cultural Commission of the Presidential Center for Strategic Studies, and in 2009, he was the director general of social and cultural studies at the Ministry of Interior for a short period. In 2018, Yaminpour published this first novel called \"نخل و نارنج\", which was reprinted forty-three times by Jamkaran Publications until August 2020. (This has now been translated to From the Riverside to the Ocean). His second novel, \"Apostasy\", was also published in 2019 by Soureh Mehr Publications. In 2020, Yaminpour was selected as the Face of the Year of the Art of the Revolution (an award given by a group of about 150 revolutionary writers and artists) for his two best-selling works (The Novel of Apostasy and The Travelogue of the Priest of Jinja Temple). He worked for a short time as an advisor to the Speaker of the Islamic Consultative Assembly and as the secretary of the Cultural Transformation Working Group.",
     "authorImage": "/src/assets/images/author-yaminpour.jpg",
     "variant": "default"
   },
   {
     "id": "spears-of-deceit",
-    "title": "SPEARS OF DECEIT",
+    "title": "Spears Of Deceit",
     "subtitle": "The Story of battle of Siffin",
     "author": "Ghulamreza Aabruye",
     "translator": "Sabira Rajabali",
     "editor": "Binte Ali",
     "category": "Historical Fiction",
-    "coverImage": "/src/assets/images/book-spears.jpg",
+    "coverImage": "/src/assets/images/book-spears.png",
     "rating": 5,
     "prices": {
-      "hardcover": 31.99,
-      "paperback": 20.99,
-      "ebook": 8.99
+      "paperback": 18.00,
+      "ebook": 12.00
     },
     "specs": {
       "isbn": "978-1-915784-03-2",
-      "pageCount": 410,
-      "weight": "650 grams",
-      "dimensions": "6 x 9 inches"
+      "pageCount": 263,
+      "weight": "287 grams",
+      "dimensions": "5.75 x 8.50 inches"
     },
-    "blurb": "Spears of Deceit takes readers into the heart of Kufa and Damascus during the turbulent events leading to the battle of Siffin. Through the eyes of diverse characters, it explores political intrigue and betrayal.",
-    "authorBio": "Ghulamreza Aabruye is a writer and researcher focused on the socio-political history of the early Islamic period.",
-    "authorImage": "/src/assets/images/author-aabruye.jpg",
+    "description": ["In the distant past, two bands of trained warriors faced each other across a desert plain. Exhausted both in body and spirit, each group impatiently awaits the command of its leader.",
+    "Two men - one stained with dark, one pure light - stand behind the thousands; two men who need the loyalty of their soldiers to save the future of Islam; two men in whose hands the fate of the Muslim ummah lies; two men who must make difficult choices. But only one of them is lion-hearted; guided by absolute faith and an unswerving love for Allah (s) and His creation.",
+    "Who will the Muslims stand with? Will they make the right decision or will they be doomed to forever regret the outcome of that fateful day...?"],
+    "authorBio": "",
+    "authorImage": "",
     "variant": "default"
   }
 ]

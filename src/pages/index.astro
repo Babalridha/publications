@@ -6,8 +6,8 @@ import teamData from '../data/team.json';
 import { PencilLine, BookOpen, GraduationCap, Users } from '@lucide/astro';
 import { Image } from 'astro:assets';
 import patternImg from '../assets/images/pattern.png';
-import intro1Img from '../assets/images/intro-1.jpg';
-import intro2Img from '../assets/images/intro-2.jpg';
+import intro1Img from '../assets/images/intro-1.png';
+import intro2Img from '../assets/images/intro-2.png';
 
 // Dynamically resolve local team images
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{webp,png,jpg,jpeg}');
@@ -29,49 +29,52 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/
         <div class="h-0.5 w-16 bg-emerald-800 mx-auto mt-4"></div>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        {/* Left side: narrative text */}
-        <div class="lg:col-span-7 space-y-6 text-slate-700 font-light leading-relaxed text-base md:text-lg">
-          <p>
-            The importance and need of research in different Islamic subjects to present the correct and precise view of Islam, and to defend Islam from various doubts that are raised, especially from Western academic circles, is undeniable. Therefore, one of the important duties and skills that is necessary for students of Hawza is the duty of doing research in different Islamic subjects and producing novel research that will be of benefit to the progress of Islam.
-          </p>
-          <p>
-            In addition, any successful academic activity requires strong planning and curriculum to make it successful and effective. Therefore, given the fact that Intensive Short Course (BRISC) and Online Learning Platform (OLP) focus on providing academic activities and services, they require well-researched and accurate course titles, course materials, authentic books, etc. to ensure the quality and accuracy of the content being offered.
-          </p>
-          <p>
-            Although a good number of Islamic books have been translated into English, mainly from Persian and Arabic. However, the Islamic resources available in English face these shortcomings and challenges: many books are translated without keeping in mind the needs and requirements of English-speaking readers, the quality of translation is not up to the mark, the books are printed in a non-standard formatting, many of the good books are not easily available and accessible owing to a poor marketing system.
-          </p>
-          <p>
-            In addition to this, little attention is paid to authoring Islamic books with strong and authentic content based on the different needs of English-speaking readers and publishing them in attractive formats, and marketing them so that they are easily accessible. As a result, despite people’s interest in Islam and the Islamic way of life, a sufficient number of solid books are not available in many areas and subjects.
-          </p>
-        </div>
-
-        {/* Right side: beautifully crafted scholarly visual placeholders */}
-        <div class="lg:col-span-5 relative py-12 flex justify-center">
-          <div class="absolute -inset-4 bg-emerald-950/5 blur-[120px] rounded-full pointer-events-none"></div>
-          
-          <div class="relative w-full max-w-sm">
-            {/* Secondary bottom overlapping image */}
-            <div class="absolute -left-8 -bottom-4 w-[65%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform -rotate-3 hover:rotate-0 transition-transform duration-500 z-10">
-              <Image 
-                src={intro1Img} 
-                alt="Classical Islamic Manuscripts and Books" 
-                class="w-full h-44 object-cover"
-              />
-            </div>
-
-            {/* Primary upper image */}
-            <div class="relative w-[85%] ml-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform hover:scale-[1.03] transition-transform duration-500 z-20">
+      <div class="space-y-20">
+        {/* Row 1 */}
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Text Left */}
+          <div class="space-y-6 text-slate-700 font-light leading-relaxed text-base md:text-lg">
+            <p>
+              The importance and need of research in different Islamic subjects to present the correct and precise view of Islam, and to defend Islam from various doubts that are raised, especially from Western academic circles, is undeniable. Therefore, one of the important duties and skills that is necessary for students of Hawza is the duty of doing research in different Islamic subjects and producing novel research that will be of benefit to the progress of Islam.
+            </p>
+            <p>
+              In addition, any successful academic activity requires strong planning and curriculum to make it successful and effective. Therefore, given the fact that Intensive Short Course (BRISC) and Online Learning Platform (OLP) focus on providing academic activities and services, they require well-researched and accurate course titles, course materials, authentic books, etc. to ensure the quality and accuracy of the content being offered.
+            </p>
+          </div>
+          {/* Image Right */}
+          <div class="relative group">
+            <div class="absolute -inset-4 bg-emerald-950/5 blur-[80px] rounded-full pointer-events-none"></div>
+            <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white transform hover:scale-[1.03] hover:-rotate-1 transition-all duration-500 ease-in-out">
               <Image 
                 src={intro2Img} 
                 alt="Scholarly Academic Library" 
-                class="w-full h-72 object-cover"
+                class="w-full h-80 object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
               />
-              {/* Subtle caption overlay */}
-              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 to-transparent p-4 text-white">
-                <p class="text-xs font-serif italic text-emerald-100">Preserving sacred academic traditions</p>
-              </div>
             </div>
+          </div>
+        </div>
+
+        {/* Row 2 */}
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image Left */}
+          <div class="relative group md:order-1 order-2">
+            <div class="absolute -inset-4 bg-emerald-950/5 blur-[80px] rounded-full pointer-events-none"></div>
+            <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white transform hover:scale-[1.03] hover:rotate-1 transition-all duration-500 ease-in-out">
+              <Image 
+                src={intro1Img} 
+                alt="Classical Islamic Manuscripts and Books" 
+                class="w-full h-80 object-cover transform transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+            </div>
+          </div>
+          {/* Text Right */}
+          <div class="space-y-6 text-slate-700 font-light leading-relaxed text-base md:text-lg md:order-2 order-1">
+            <p>
+              Although a good number of Islamic books have been translated into English, mainly from Persian and Arabic. However, the Islamic resources available in English face these shortcomings and challenges: many books are translated without keeping in mind the needs and requirements of English-speaking readers, the quality of translation is not up to the mark, the books are printed in a non-standard formatting, many of the good books are not easily available and accessible owing to a poor marketing system.
+            </p>
+            <p>
+              In addition to this, little attention is paid to authoring Islamic books with strong and authentic content based on the different needs of English-speaking readers and publishing them in attractive formats, and marketing them so that they are easily accessible. As a result, despite people’s interest in Islam and the Islamic way of life, a sufficient number of solid books are not available in many areas and subjects.
+            </p>
           </div>
         </div>
       </div>
