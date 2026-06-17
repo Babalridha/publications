@@ -3,10 +3,7 @@
   "patternUrl": "/src/assets/images/pattern.png",
   "logoUrl": "/src/assets/images/logo.png",
   "sliderImages": [
-    "/src/assets/images/slider-1.webp",
-    "/src/assets/images/slider-2.png",
-    "/src/assets/images/slider-3.png",
-    "/src/assets/images/slider-4.png"
+    "/src/assets/images/slider-3.png"
   ],
   "newsItems": [
     {

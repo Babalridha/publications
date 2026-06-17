@@ -15,11 +15,7 @@ interface Props {
     category: string;
     coverImage: string;
     rating: number;
-    prices: {
-      hardcover: number;
-      paperback: number;
-      ebook: number;
-    };
+    prices: Record<string, number>;
     specs: {
       isbn: string;
       pageCount: number;
@@ -30,6 +26,8 @@ interface Props {
     description?: string | string[];
     authorBio: string;
     authorImage: string;
+    amazonLink?: string;
+    videoUrl?: string;
   };
 }
 
@@ -113,9 +111,23 @@ if (book.authorImage && !authorResolved) {
 
           {/* CTAs */}
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <button class="flex-1 bg-emerald-900 text-white py-6 rounded-sm font-black text-xs tracking-[0.2em] hover:bg-emerald-800 transition-all flex items-center justify-center gap-3 shadow-xl uppercase cursor-pointer">
-              <ShoppingCart class="w-[18px] h-[18px]" /> BUY FROM AMAZON
-            </button>
+            {book.amazonLink && book.amazonLink !== "Pending" ? (
+              <a 
+                href={book.amazonLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="flex-1 bg-emerald-900 text-white py-6 rounded-sm font-black text-xs tracking-[0.2em] hover:bg-emerald-800 transition-all flex items-center justify-center gap-3 shadow-xl uppercase text-center leading-[1]"
+              >
+                <ShoppingCart class="w-[18px] h-[18px]" /> BUY FROM AMAZON
+              </a>
+            ) : (
+              <button 
+                disabled 
+                class="flex-1 bg-slate-100 border border-slate-200 text-slate-400 py-6 rounded-sm font-black text-xs tracking-[0.2em] flex items-center justify-center gap-3 uppercase cursor-not-allowed"
+              >
+                <ShoppingCart class="w-[18px] h-[18px]" /> AMAZON
+              </button>
+            )}
             <a href="/how-to-buy" class="flex-1 bg-white border border-slate-200 text-slate-800 py-6 rounded-sm font-black text-xs tracking-[0.2em] hover:bg-slate-50 transition-all flex items-center justify-center uppercase text-center leading-[1] flex items-center justify-center">
               LOCAL AGENTS
             </a>
@@ -125,9 +137,11 @@ if (book.authorImage && !authorResolved) {
           <div class="grid grid-cols-2 gap-y-8 pt-10 border-t border-slate-100">
             <div class="flex items-center gap-4">
               <div class="p-3 bg-emerald-50 rounded-full text-emerald-800"><BookText class="w-5 h-5" /></div>
-              <div>
+               <div>
                 <span class="block text-slate-400 font-black uppercase text-[9px] tracking-widest">ISBN</span>
-                <span class="text-sm text-slate-900 font-bold">{book.specs.isbn}</span>
+                {book.specs.isbn.split(', ').map((isbnLine) => (
+                  <span class="block text-sm text-slate-900 font-bold">{isbnLine}</span>
+                ))}
               </div>
             </div>
             <div class="flex items-center gap-4">
@@ -191,9 +205,33 @@ if (book.authorImage && !authorResolved) {
     </section>
   )}
 
+  {/* Video Introduction Section */}
+  {book.videoUrl && (
+    <section class="py-24 bg-[#fcfbf7] border-t border-slate-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-center">
+        <div class="space-y-4">
+          <span class="text-emerald-800 font-black tracking-[0.4em] uppercase text-[9px]">Media Spotlight</span>
+          <h2 class="text-4xl font-serif text-slate-900">Video Introduction</h2>
+          <div class="h-0.5 w-12 bg-emerald-800 mx-auto"></div>
+        </div>
+        
+        <div class="relative aspect-video bg-black rounded-sm overflow-hidden shadow-2xl border border-white/10 ring-1 ring-slate-200">
+          <iframe 
+            class="absolute inset-0 w-full h-full"
+            src={book.videoUrl}
+            title={`${book.title} Video Introduction`}
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  )}
+
   {/* Author Section */}
   {book.authorBio && (
-    <section class="py-24 bg-[#fcfbf7] border-t border-slate-100">
+    <section class="py-24 bg-white border-t border-slate-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader title="About the Author"/>
         <div class="max-w-3xl mx-auto bg-white rounded-sm shadow-xl p-12 md:p-16 border border-slate-100 text-center space-y-8">
@@ -208,7 +246,7 @@ if (book.authorImage && !authorResolved) {
           )}
           <div class="space-y-6">
             <div class="space-y-2">
-              <span class="text-emerald-800 font-black tracking-[0.4em] uppercase text-[9px]">Expert Profile</span>
+              {/* <span class="text-emerald-800 font-black tracking-[0.4em] uppercase text-[9px]">Expert Profile</span> */}
               <h3 class="text-4xl font-serif text-slate-900 leading-tight">{book.author}</h3>
             </div>
             <p class="text-base md:text-lg text-slate-600 leading-relaxed font-light max-w-2xl mx-auto text-left md:text-center">
