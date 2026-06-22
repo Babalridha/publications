@@ -1,0 +1,34 @@
+{
+  "id": "spears-of-deceit",
+  "title": "Spears Of Deceit",
+  "subtitle": "The Story of battle of Siffin",
+  "author": "Ghulamreza Aabruye",
+  "translator": "Sabira Rajabali",
+  "editor": "Binte Ali",
+  "category": "Historical Fiction",
+  "coverImage": "/src/assets/images/book-spears.jpeg",
+  "prices": {
+    "paperback": 18.00,
+    "ebook": 12.00
+  },
+  "specs": {
+    "isbn": "978-1-915784-03-2 (color), 978-1-915784-09-4 (black & white)",
+    "pageCount": 263,
+    "weight": "287 grams",
+    "dimensions": "5.75 x 8.50 inches"
+  },
+  "blurb": "",
+  "description": [
+    "In the distant past, two bands of trained warriors faced each other across a desert plain. Exhausted both in body and spirit, each group impatiently awaits the command of its leader.",
+    "Two men – one stained with dark, one pure light – stand behind the thousands; two men who need the loyalty of their soldiers to save the future of Islam; two men in whose hands the fate of the Muslim ummah lies; two men who must make difficult choices.",
+    "But only one of them is lion-hearted; guided by absolute faith and an unswerving love for Allah (s) and His creation.",
+    "Who will the Muslims stand with? Will they make the right decision or will they be doomed to forever regret the outcome of that fateful day…?"
+  ],
+  "authorBio": "",
+  "authorImage": "",
+  "amazonLink": {
+    "color": "https://www.amazon.com/dp/1915784034",
+    "black & white": "https://www.amazon.com/dp/1915784093"
+  },
+  "variant": "default"
+}

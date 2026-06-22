@@ -1,0 +1,28 @@
+{
+  "id": "lofty-stations",
+  "title": "Lofty Stations",
+  "subtitle": "Requirements for Eternal Felicity",
+  "author": "Shaykh Abbas al-Qummi",
+  "translator": "Fazleabbas Kanji",
+  "editor": "Sayyid Ali Irtiza & Sayyida Sumaira Ahmed",
+  "category": "Ethics",
+  "coverImage": "/src/assets/images/book-lofty.jpg",
+  "prices": {
+    "color": 35.00
+  },
+  "specs": {
+    "isbn": "978-1-915784-07-0 (color), 978-1-915784-04-9 (black & white)",
+    "pageCount": 420,
+    "weight": "680 grams",
+    "dimensions": "6 x 9 inches"
+  },
+  "blurb": "",
+  "description": [
+    "At a time when the pursuit of moral clarity is becoming both difficult and important, this book fills a significant void in English literature by providing a succinct yet thorough examination of Akhlaq, the Islamic study of moral etiquette. The author carefully divides human virtues and vices into chapters that represent the various faculties we each possess. Each chapter guides us through the complexities of a particular moral trait, shedding light on its sources and manifestations.",
+    "However, this book serves as a roadmap for change rather than a mere list of flaws. The author highlights the related qualities that can lead us to live moral lives and offers enlightening solutions for overcoming these vices. This exploration fosters a deeper understanding of our character and invites us to reflect, learn, and grow as moral human beings, moving towards a more profound ethical existence."
+  ],
+  "authorBio": "This humble and weak servant, entangled in the trap of aspirations, `Abbas bin Muḥammad Riḍ̣ā al-Qummī, may Allah make him aware of his shortcomings, says: It is clear to every rational person that the elevated status of human beings over all other animals lies in their ability to repel vile, loathsome traits and attain commendable moral virtues. Indeed, both the intellect and the extensively transmitted texts affirm that anyone who seeks to walk the path of truth must polish the mirror of the heart to remove the rust of moral vices and adorn it with moral virtues. Thus, it has been said:\n\nSeek the Beloved’s face, make thy mirror gloss, Roses and lilies don’t blossom in iron and brass (Hafez).\n\nIt is also clear that cleansing the heart of undesirable traits and to adorn it with admirable qualities depend on recognising these characteristics and knowing the prescribed methods for treating each one. The discipline responsible for detailing these matters is the science of Akhlāq, and thus our scholars – may Allah be pleased with them – have authored numerous works in this field. Among them is a book highly regarded and widely accepted by both the general public and leading scholars alike: the noble work titled The Ascension of Felicity (Miʿrāj al-Saʿādah), penned by the esteemed scholar, lofty sage, wise philosopher, and righteous jurist Mullā Aḥmad al-Narāqī – may Allah sanctify his soul. In truth, no finer book has been written in the Persian language in this honourable field. It is, therefore, essential for the seekers of the stages of felicity to keep this excellent book close at hand and benefit from it.",
+  "authorImage": "/src/assets/images/placeholder-author.png",
+  "amazonLink": "Pending",
+  "variant": "default"
+}

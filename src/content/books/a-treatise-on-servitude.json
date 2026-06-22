@@ -1,0 +1,31 @@
+{
+  "id": "a-treatise-on-servitude",
+  "title": "A Treatise on Servitude",
+  "subtitle": "A Commentary on Imam Sajjad's (a) Risalat al-Huquq",
+  "author": "Ayatullah Muhammad Baqir Tahriri",
+  "translator": "Salman Bhojani",
+  "editor": "Muhammad Mahdi Kassamali",
+  "category": "Spirituality",
+  "coverImage": "/src/assets/images/book-treatise.png",
+  "prices": {
+    "hardcover": 34.99,
+    "paperback": 24.99,
+    "ebook": 9.99
+  },
+  "specs": {
+    "isbn": "9781915784018 (paperback), 9781915784025 (hardbound), 9781915784001 (ebook)",
+    "pageCount": 560,
+    "weight": "810 grams (paperback), 980 grams (hardcover)",
+    "dimensions": "6 x 9 inches"
+  },
+  "blurb": "",
+  "description": [
+    "In essence, the Risālat al-huqūq is an expounding of three rights. The first is the responsibilities and existential relationship that the human has with respect to Allah (absolute submission).",
+    "The second deals with the responsibilities and existential relationship of the human with respect to himself, including his body parts (the right of a human on himself). And the third consists of the responsibilities and laws governing the human’s relationship with one another (the rights of others). If we correctly understand the meaning of rights, then we will clearly recognize that to achieve complete success in fulfilling the rights of Allah, there is no other way except to humble oneself before Allah and seek His help.",
+    "Even the prophets and awliyāʾ (close servants) of Allah, despite their abundant knowledge and spiritual stations, never neglected seeking help from Allah, not even for a moment! The Noble Prophet of Islam (peace and blessings be upon him and his family), whose blessed existence was an infinite ocean of knowledge, at every moment considered himself in need of Allah’s assistance."
+  ],
+  "authorBio": "Ayatullah Muhammad Baqir Tahriri is one of the most senior contemporary scholars of ethics, Islamic spirituality, and tafsir. He acquired his seminary studies under the most senior Shia scholars, such as Ayatullah Lankarani, Ayatullah Tabrizi, Ayatullah Misbah Yazdi and Ayatullah Jawadi Amoli, and at the same time, received spiritual guidance by his own father, Ayatullah Mahmood Tahriri. Ayatullah Mujtahidi, the giants Allamah Tabatabei and Ayatullah Bahjat, and spent years under the special guidance of Ayatullah Sa’adat Parwar. Currently, he resides in Tehran whilst frequenting the Holy city of Qum on the weekends, where students from all over Iran, as well as foreigners come to benefit from his ethical advices and spiritual instructions.",
+  "authorImage": "/src/assets/images/author-tahriri.jpg",
+  "amazonLink": "https://www.amazon.com",
+  "variant": "default"
+}

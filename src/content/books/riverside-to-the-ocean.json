@@ -1,0 +1,35 @@
+{
+  "id": "riverside-to-the-ocean",
+  "title": "Riverside to the Ocean",
+  "subtitle": "The Life of Sheikh Morteza Ansari",
+  "author": "Vahid Yaminpour",
+  "translator": "Seyyid Ali Irtiza",
+  "category": "Historical Fiction",
+  "coverImage": "/src/assets/images/book-riverside.jpg",
+  "prices": {
+    "paperback": 15.00,
+    "ebook": 10.00
+  },
+  "specs": {
+    "isbn": "978-1-915784-06-3 (color), 978-1-915784-08-7 (black & white)",
+    "pageCount": 304,
+    "weight": "287 grams",
+    "dimensions": "5 x 8 inches"
+  },
+  "blurb": "",
+  "description": [
+    "“I saw Imam Sadiq, peace be upon him, and he gave me a beautiful Quran. Its edges were decorated… it was just otherworldly.” “Muhammad, what does my dream mean?” “It is a glad tiding by Allah’s will. The Quran you received is the child you shall soon bear, Mullah Yaqoob’s Daughter!”",
+    "Murtaza’s destiny seemed set in stone even before he was born. Yet, that he would have to earn every bit of it—and magnify it on a temporal canvas through nearly intolerable struggles—was beyond question.",
+    "Born into the noble Ansari family of Dezful, he grew up learning much and fast. But the prancing River Dez and the bricked streets of Dezful could only entertain him for so long as a child. His restless soul and insatiable mind eventually led him to where all those thirsty must come, and where none leave unquenched.",
+    "In the shadow of Amir al-Mu’mineen’s luminous Shrine, the unassuming Murtaza first became Shaykh, and then Khatam al-Fuqaha—the Seal of the Jurists! Yet, Murtaza remained unchanged—the humble boy from Dezful who carried his mother to the Shrine of his master on his ageing back each day, and who lived more austerely than even Catholic monks, even as millions around the world emulated him as a marja.",
+    "It was in Najaf that Shaykh Murtaza Ansari’s long-awaited prayer was granted in the form of his friend, teacher, and mystical guide: Sayyid Ali Shushtari, the progenitor of the illustrious line of latter-day Shia mystics known as Maktab-e-Najaf.",
+    "The otherworldly bond between the great marja and the great mystic endured until both found their eternal abode at the doorstep of their master’s Shrine—a place where a young Murtaza had once felt inexplicably at home, and where he had beseeched Amir al-Mu’mineen (as) to grant him his company and closeness."
+  ],
+  "authorBio": "Vahid Yaminpour (born December 24, 1980) is an Iranian university lecturer, writer, media activist, and presenter, who was appointed as the secretary of the Supreme Council of Youth on June 21, 2022, by a presidential decree, and was promoted to the Supreme Council of Adolescents and Youth, and was appointed as its secretary in February 2024. Yaminpour also served as the Deputy Minister of Youth Affairs at the Ministry of Sports and Youth from October 2021 to February 2024. He holds a master's degree in criminal law and criminology from Imam Sadegh University and a Ph.D. in the same field from the Islamic Azad University, Science and Research Branch, Tehran. Yaminpour has hosted political programs such as Yesterday, Today, Tomorrow, Jahanara, and Soraya on the Islamic Republic of Iran Television. In 2006, he was appointed secretary of the Socio-Cultural Commission of the Presidential Center for Strategic Studies, and in 2009, he was the director general of social and cultural studies at the Ministry of Interior for a short period. In 2018, Yaminpour published this first novel called \"نخل و نارنج\", which was reprinted forty-three times by Jamkaran Publications until August 2020. (This has now been translated to From the Riverside to the Ocean). His second novel, \"Apostasy\", was also published in 2019 by Soureh Mehr Publications. In 2020, Yaminpour was selected as the Face of the Year of the Art of the Revolution (an award given by a group of about 150 revolutionary writers and artists) for his two best-selling works (The Novel of Apostasy and The Travelogue of the Priest of Jinja Temple). He worked for a short time as an advisor to the Speaker of the Islamic Consultative Assembly and as the secretary of the Cultural Transformation Working Group.",
+  "authorImage": "/src/assets/images/author-yaminpour.jpg",
+  "amazonLink": {
+    "color": "https://www.amazon.com/dp/1915784069",
+    "black & white": "https://www.amazon.com/dp/1915784085"
+  },
+  "variant": "default"
+}

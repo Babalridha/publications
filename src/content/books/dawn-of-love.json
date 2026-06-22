@@ -1,0 +1,30 @@
+{
+  "id": "dawn-of-love",
+  "title": "Dawn of Love",
+  "subtitle": "Guidance for young couples by Ayatullah Khamenei",
+  "author": "Ayatullah Khamenei",
+  "category": "Spirituality",
+  "coverImage": "/src/assets/images/book-dawn.jpg",
+  "prices": {
+    "black & white": 11.00,
+    "color": 14.00
+  },
+  "specs": {
+    "isbn": "978-1-915784-07-0 (color), 978-1-915784-10-0 (black & white)",
+    "pageCount": 220,
+    "weight": "450 grams",
+    "dimensions": "5.5 x 8.5 inches"
+  },
+  "blurb": "Marriage is a divine law and a noble custom that permeates all of creation. It is one of the signs of the beauty of the Architect of existence. Marriage represents the coming together of two pillars that support the edifice of human existence, the attachment of two pans of the scale that balances life. (pg 24).",
+  "description": [
+    "For his guidance, Ayatullah Khamenei draws extensively on the domestic lives of historical exemplars in Shia Islam, most notably the marriage between Imam Ali and Lady Fatimah al-Zahra. By highlighting their mutual respect, shared struggles, and simple lifestyle, he presents modern couples with a timeless template for balancing daily life with spiritual growth. This book illuminates a softer, deeply pastoral side of the Ayatullah—one that speaks not as a distant politician, but as a compassionate mentor guiding a new generation through the profound spiritual journey of shared life."
+  ],
+  "authorBio": "Ayatullah Sayyid Ali Khamenei is widely recognized on the global stage for his political authority and his decades-long role as the Supreme Leader of the Islamic Republic of Iran. However, beyond his administrative and geopolitical responsibilities, he is a deeply trained Islamic scholar, a senior jurist (marja'), and a mystic at heart. For decades, he has maintained a unique tradition of personally officiating marriage ceremonies for young couples from all walks of life. The book The Dawn of Love captures the essence of these private gatherings, offering readers an intimate look into a leader who views the family unit as the foundational bedrock of a healthy, spiritual society.\n\nIn these addresses, Ayatullah Khamenei shifts his focus from state matters to the delicate dynamics of human relationships. Grounding his advice in the Quranic concept of sakina (tranquillity and peace), he frequently compares love to a tender flower that requires daily watering, patience, and mutual loyalty to survive the elements of time. Rather than presenting marriage as a rigid legal contract, his guidance frames it as a divine gift and a partnership of souls. He warns heavily against allowing materialism, exorbitant dowries, or superficial social status to turn a sacred union into a cold business deal.",
+  "authorImage": "/src/assets/images/author-khamenei.jpg",
+  "amazonLink": {
+    "black & white": "https://www.amazon.com/dp/1915784107",
+    "color": "Color not live yet"
+  },
+  "videoUrl": "https://www.youtube-nocookie.com/embed/0i9TizXLMxY",
+  "variant": "default"
+}

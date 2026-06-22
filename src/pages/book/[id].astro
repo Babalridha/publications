@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import BookTemplate from '../../components/BookTemplate.astro';
-import booksData from '../../data/books.json';
+import { getCollection } from 'astro:content';
 
-export function getStaticPaths() {
-  return booksData.map((book) => ({
-    params: { id: book.id },
-    props: { book },
+export async function getStaticPaths() {
+  const entries = await getCollection('books');
+  return entries.map((entry) => ({
+    params: { id: entry.id },
+    props: { book: entry.data },
   }));
 }
 
