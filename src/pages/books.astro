@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import patternImg from '../assets/images/pattern.png';
+
+const books = await getCollection('books');
+
+// Dynamically resolve local cover images
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{webp,png,jpg,jpeg}');
+---
+<Layout title="Publications Library - Bab al-Ridha Publications">
+  <div class="bg-[#fcfbf7] min-h-screen pt-32 pb-24 relative overflow-hidden">
+    {/* Background Pattern */}
+    <div 
+      class="absolute right-0 top-0 w-full h-full opacity-[0.02] pointer-events-none" 
+      style={{ backgroundImage: `url(${patternImg.src})`, backgroundSize: '400px' }}
+    ></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <SectionHeader title="OUR PUBLICATIONS" subtitle="Explore our curated collection of Islamic scholarly works, historical fiction, and ethical guides" />
+
+      {/* Filter Tabs */}
+      <div class="flex flex-wrap justify-center gap-3 mb-16">
+        <button class="filter-btn active px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all cursor-pointer bg-emerald-900 text-white shadow-md border-0" data-filter="all">All</button>
+        <button class="filter-btn px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all cursor-pointer bg-white text-slate-700 border border-slate-200 hover:border-emerald-800 hover:text-emerald-800" data-filter="spirituality">Spirituality</button>
+        <button class="filter-btn px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all cursor-pointer bg-white text-slate-700 border border-slate-200 hover:border-emerald-800 hover:text-emerald-800" data-filter="historical fiction">Historical Fiction</button>
+        <button class="filter-btn px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all cursor-pointer bg-white text-slate-700 border border-slate-200 hover:border-emerald-800 hover:text-emerald-800" data-filter="ethics">Ethics</button>
+      </div>
+
+      {/* Catalog Grid */}
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="books-grid">
+        {books.map((book) => {
+          const coverImgResolved = images[book.data.coverImage];
+          if (!coverImgResolved) {
+            throw new Error(`Cover image not found for path: ${book.data.coverImage}`);
+          }
+          const descriptionText = book.data.blurb || (Array.isArray(book.data.description) ? book.data.description[0] : book.data.description) || "";
+          
+          return (
+            <div 
+              class="book-card bg-white border border-slate-100 rounded-sm shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full group overflow-hidden" 
+              data-category={book.data.category.toLowerCase()}
+            >
+              {/* Cover Image Container */}
+              <div class="relative overflow-hidden bg-slate-50 p-8 flex items-center justify-center border-b border-slate-100 aspect-[4/5] group/img">
+                <div class="absolute -inset-10 bg-emerald-950/5 blur-[50px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <a href={`/book/${book.id}`} class="relative block w-full h-full flex items-center justify-center">
+                  <Image 
+                    src={coverImgResolved()} 
+                    alt={book.data.title}
+                    class="w-auto h-full max-h-[260px] shadow-lg rounded-sm transform group-hover/img:scale-105 group-hover/img:rotate-1 transition-all duration-700 border-l-2 border-slate-200"
+                  />
+                </a>
+              </div>
+
+              {/* Book Metadata */}
+              <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
+                <div class="space-y-3">
+                  <span class="inline-block text-[9px] font-black text-emerald-800 uppercase tracking-widest">{book.data.category}</span>
+                  <h3 class="text-2xl font-serif text-slate-900 group-hover:text-emerald-900 transition-colors uppercase leading-tight">
+                    <a href={`/book/${book.id}`}>{book.data.title}</a>
+                  </h3>
+                  {book.data.subtitle && <p class="text-xs font-serif italic text-emerald-800 leading-snug">{book.data.subtitle}</p>}
+                  <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">By {book.data.author}</p>
+                  <p class="text-xs text-slate-500 font-light leading-relaxed line-clamp-4">
+                    {descriptionText}
+                  </p>
+                </div>
+
+                <div class="pt-6 border-t border-slate-100 space-y-4">
+                  {/* Formats & Prices */}
+                  <div class="flex flex-wrap gap-1.5 text-[9px] font-black uppercase tracking-wider text-slate-400">
+                    {Object.entries(book.data.prices).map(([format, price]) => (
+                      <span class="bg-slate-50 border border-slate-200/50 px-2 py-1 rounded-sm">
+                        {format}: <span class="text-slate-950">${price.toFixed(2)}</span>
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Actions */}
+                  <div class="pt-2">
+                    <a 
+                      href={`/book/${book.id}`}
+                      class="block bg-emerald-900 text-white text-center py-4 rounded-sm font-black text-[10px] tracking-[0.2em] hover:bg-emerald-800 transition-all uppercase shadow-md leading-[1]"
+                    >
+                      VIEW DETAILS
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script is:inline>
+  function setupFilters() {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.book-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Reset styles for all buttons
+        buttons.forEach(b => {
+          b.classList.remove('bg-emerald-900', 'text-white', 'shadow-md', 'active', 'border-0');
+          b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+        });
+
+        // Set active style for clicked button
+        btn.classList.add('bg-emerald-900', 'text-white', 'shadow-md', 'active', 'border-0');
+        btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          if (filterValue === 'all' || cardCategory === filterValue) {
+            card.style.display = 'flex';
+            card.style.opacity = '0';
+            setTimeout(() => {
+              card.style.transition = 'opacity 300ms ease';
+              card.style.opacity = '1';
+            }, 30);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // Setup on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFilters);
+  } else {
+    setupFilters();
+  }
+</script>

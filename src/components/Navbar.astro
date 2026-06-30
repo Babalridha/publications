@@ -29,6 +29,16 @@ const { isHome = false } = Astro.props;
 
       <!-- Desktop Nav -->
       <div class="hidden lg:flex items-center">
+        <!-- All Books -->
+        <div class="group relative">
+          <a 
+            href="/books" 
+            class="nav-link flex items-center gap-1 px-4 py-2 text-[10px] font-black transition-all uppercase tracking-[0.2em]"
+          >
+            All Books
+          </a>
+        </div>
+
         <!-- Spirituality Dropdown -->
         <div class="group relative">
           <a 
@@ -125,6 +135,8 @@ const { isHome = false } = Astro.props;
     </div>
     
     <div class="space-y-6 overflow-y-auto pr-2">
+      <a href="/books" class="block py-4 font-bold text-slate-900 border-b border-slate-100 tracking-[0.2em] text-[10px] uppercase">ALL BOOKS</a>
+      
       <div class="space-y-3">
         <p class="text-[10px] font-black tracking-[0.4em] text-emerald-800 uppercase">Spirituality</p>
         <a href="/book/a-treatise-on-servitude" class="block text-xl font-serif text-slate-900">A Treatise on Servitude</a>
