@@ -7,13 +7,16 @@ interface Props {
   title?: string;
   description?: string;
   isHome?: boolean;
+  robots?: string;
 }
 
 const { 
   title = "Bab al-Ridha Publications", 
   description = "A mission-driven educational showcase for scholarly Islamic publications, featuring academic authority and institutional clarity.",
-  isHome = false
+  isHome = false,
+  robots
 } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +25,8 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {robots && <meta name="robots" content={robots} />}
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/png" href="/favicon.png" />
     
     <!-- Google tag (gtag.js) -->
