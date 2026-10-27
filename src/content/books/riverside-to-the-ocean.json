@@ -7,8 +7,8 @@
   "category": "Historical Fiction",
   "coverImage": "/src/assets/images/book-riverside.jpg",
   "prices": {
-    "paperback": 15.00,
-    "ebook": 10.00
+    "black & white": 10.00,
+    "color": 15.00
   },
   "specs": {
     "isbn": "978-1-915784-06-3 (color), 978-1-915784-08-7 (black & white)",

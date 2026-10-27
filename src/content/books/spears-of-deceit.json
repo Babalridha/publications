@@ -8,8 +8,8 @@
   "category": "Historical Fiction",
   "coverImage": "/src/assets/images/book-spears.jpeg",
   "prices": {
-    "paperback": 18.00,
-    "ebook": 12.00
+    "black & white": 12.00,
+    "color": 18.00
   },
   "specs": {
     "isbn": "978-1-915784-03-2 (color), 978-1-915784-09-4 (black & white)",
